@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakhile Bhayi | Industrial Intelligence Architect</title>
+  <meta name="description" content="Technology professional building fleet management platforms, mining analytics systems, and intelligent data solutions."/>
+  <meta name="keywords" content="mining technology, Mining applications, FMS, Fleet Management Systems, fleet intelligence, mining analytics, industrial data platforms, fleet management software"/>
+  <meta property="og:title" content="Sakhile Bhayi | Applications Specialist | Software Architect | Mine Control Systems Engineer."/>
+  <meta property="og:description" content="Technology professional building fleet management platforms, mining analytics systems, and intelligent data solutions."/>
+  <meta property="og:type" content="website"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#1c1b1d",
+            "outline": "#88929b",
+            "on-tertiary": "#492900",
+            "on-background": "#e5e1e4",
+            "secondary-fixed-dim": "#89ceff",
+            "on-primary-container": "#313334",
+            "on-tertiary-container": "#4d2b00",
+            "on-secondary": "#00344d",
+            "background": "#131315",
+            "on-secondary-fixed-variant": "#004c6e",
+            "surface-container": "#201f22",
+            "on-error": "#690005",
+            "surface-variant": "#353437",
+            "surface-container-high": "#2a2a2c",
+            "inverse-primary": "#5d5f5f",
+            "error-container": "#93000a",
+            "on-primary-fixed-variant": "#454747",
+            "primary-container": "#9a9b9c",
+            "on-secondary-fixed": "#001e2f",
+            "on-error-container": "#ffdad6",
+            "on-secondary-container": "#00344e",
+            "tertiary-fixed-dim": "#ffb86e",
+            "on-primary": "#2f3131",
+            "surface-dim": "#131315",
+            "inverse-on-surface": "#313032",
+            "surface-container-lowest": "#0e0e10",
+            "tertiary-fixed": "#ffdcbd",
+            "tertiary-container": "#de8712",
+            "outline-variant": "#3e4850",
+            "surface": "#131315",
+            "primary-fixed-dim": "#c6c6c7",
+            "on-tertiary-fixed-variant": "#693c00",
+            "tertiary": "#ffb86e",
+            "on-tertiary-fixed": "#2c1600",
+            "error": "#ffb4ab",
+            "surface-container-highest": "#353437",
+            "secondary-fixed": "#c9e6ff",
+            "surface-bright": "#39393b",
+            "on-surface-variant": "#bec8d2",
+            "on-surface": "#e5e1e4",
+            "inverse-surface": "#e5e1e4",
+            "secondary": "#89ceff",
+            "primary-fixed": "#e2e2e2",
+            "on-primary-fixed": "#1a1c1c",
+            "secondary-container": "#00a2e6",
+            "primary": "#c6c6c7",
+            "surface-tint": "#c6c6c7"
+          },
+          fontFamily: {
+            "headline": ["Epilogue"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-edge { border-top: 1px solid rgba(137, 206, 255, 0.1); }
+    .text-glow  { text-shadow: 0 0 30px rgba(137, 206, 255, 0.3); }
+    html { scroll-behavior: smooth; }
+    /* Ensure select options are dark on dark backgrounds */
+    select option { background-color: #201f22; color: #e5e1e4; }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary selection:text-on-secondary">
+
+<!-- ========== TOP NAV BAR ========== -->
+<nav class="fixed top-0 w-full z-50 bg-[#131315]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0_20px_40px_rgba(137,206,255,0.08)]">
+  <a href="#home" class="text-xl font-black tracking-tighter text-[#c6c6c7] font-['Epilogue'] xl:opacity-0 xl:pointer-events-none transition-opacity">SAKHILE BHAYI</a>
+  <div class="hidden md:flex xl:hidden gap-8 items-center">
+    <a class="font-['Epilogue'] tracking-tight font-bold text-sm text-[#c6c6c7]/60 hover:text-[#c6c6c7] transition-colors" href="#home">Home</a>
+    <a class="font-['Epilogue'] tracking-tight font-bold text-sm text-[#c6c6c7]/60 hover:text-[#c6c6c7] transition-colors" href="#about">Biography</a>
+    <a class="font-['Epilogue'] tracking-tight font-bold text-sm text-[#c6c6c7]/60 hover:text-[#c6c6c7] transition-colors" href="#expertise">Expertise</a>
+    <a class="font-['Epilogue'] tracking-tight font-bold text-sm text-[#c6c6c7]/60 hover:text-[#c6c6c7] transition-colors" href="#contact">Contact</a>
+  </div>
+  <button id="mobile-menu-btn" class="material-symbols-outlined text-[#89ceff] hover:bg-[#c6c6c7]/10 p-2 rounded-full transition-all duration-300 active:scale-95 xl:hidden">menu</button>
+</nav>
+
+<!-- ========== MOBILE DRAWER ========== -->
+<div id="mobile-drawer" class="fixed inset-0 z-[70] hidden">
+  <div id="drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+  <div class="absolute top-0 right-0 h-full w-72 bg-[#131315] border-l border-[#c6c6c7]/10 flex flex-col p-8 pt-20">
+    <button id="close-drawer" class="absolute top-4 right-4 material-symbols-outlined text-[#89ceff] hover:bg-[#c6c6c7]/10 p-2 rounded-full transition-all">close</button>
+    <nav class="space-y-2 mt-4">
+      <a class="flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/70 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" href="#home">
+        <span class="material-symbols-outlined">architecture</span> Home
+      </a>
+      <a class="flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/70 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" href="#about">
+        <span class="material-symbols-outlined">inventory_2</span> Biography
+      </a>
+      <a class="flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/70 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" href="#expertise">
+        <span class="material-symbols-outlined">precision_manufacturing</span> Expertise
+      </a>
+      <a class="flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/70 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" href="#contact">
+        <span class="material-symbols-outlined">terminal</span> Contact
+      </a>
+    </nav>
+    <a href="#contact" class="mt-auto w-full bg-secondary text-on-secondary py-4 rounded-md font-bold tracking-tight text-center active:scale-95 transition-transform inline-block">
+      Start A Conversation
+    </a>
+  </div>
+</div>
+
+<!-- ========== SIDEBAR NAV (xl+) ========== -->
+<aside class="fixed inset-y-0 left-0 z-[60] hidden xl:flex flex-col p-6 h-full w-80 border-r border-[#c6c6c7]/10 bg-[#131315]">
+  <div class="mb-12">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-14 h-14 rounded-lg bg-surface-container-high overflow-hidden border border-outline-variant/20 flex items-center justify-center p-1">
+        <img alt="Sakhile Bhayi" class="w-full h-full object-contain" src="/logo.png"/>
+      </div>
+      <div>
+        <h3 class="font-['Epilogue'] text-lg font-bold text-[#c6c6c7]">Sakhile Bhayi</h3>
+        <p class="text-[0.7rem] uppercase tracking-widest text-outline">Industrial Intelligence Architect</p>
+      </div>
+    </div>
+    <nav class="space-y-1" id="sidebar-nav">
+      <a class="nav-link flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/40 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" data-section="home" href="#home">
+        <span class="material-symbols-outlined">architecture</span> Overview
+      </a>
+      <a class="nav-link flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/40 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" data-section="expertise" href="#expertise">
+        <span class="material-symbols-outlined">precision_manufacturing</span> Industrial Logic
+      </a>
+      <a class="nav-link flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/40 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" data-section="about" href="#about">
+        <span class="material-symbols-outlined">inventory_2</span> Vault
+      </a>
+      <a class="nav-link flex items-center gap-4 p-3 font-['Inter'] font-medium text-[0.875rem] text-[#c6c6c7]/40 hover:text-[#c6c6c7] hover:bg-[#c6c6c7]/5 transition-all rounded-lg" data-section="contact" href="#contact">
+        <span class="material-symbols-outlined">terminal</span> Contact
+      </a>
+    </nav>
+  </div>
+  <div class="mt-auto">
+    <a href="#contact" class="block w-full bg-secondary text-on-secondary py-4 rounded-md font-bold tracking-tight text-center hover:brightness-110 active:scale-95 transition-all">
+      Initiate Protocol
+    </a>
+  </div>
+</aside>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="xl:pl-80 pt-20">
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 py-24 overflow-hidden">
+    <!-- Decorative ambient glow -->
+    <div class="absolute top-0 right-0 w-2/3 h-full opacity-20 pointer-events-none" aria-hidden="true">
+      <div class="absolute inset-0 bg-gradient-to-bl from-secondary/30 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent"></div>
+    </div>
+
+    <div class="relative z-20 max-w-5xl">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="w-12 h-[2px] bg-secondary"></span>
+        <span class="text-[0.6875rem] uppercase tracking-[0.2em] text-secondary font-bold font-['Inter']">SAKHILE BHAYI // ARCHITECT</span>
+      </div>
+      <h1 class="font-['Epilogue'] text-[3rem] sm:text-[4rem] md:text-[5rem] font-black leading-[0.9] tracking-[-0.05em] text-primary mb-12">
+        INDUSTRIAL<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary-container">INTELLIGENCE</span><br/>
+        ARCHITECT
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+        <p class="font-['Inter'] text-on-surface-variant leading-relaxed text-lg max-w-sm">
+          I help mining organisations convert fragmented operational data into confident decisions, stronger leadership visibility, and consistent production momentum.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="px-8 py-4 bg-secondary text-on-secondary font-bold rounded-md hover:brightness-110 transition-all active:scale-95">
+            START A CONVERSATION
+          </a>
+          <a href="#about" class="px-8 py-4 border border-outline-variant/30 text-primary font-bold rounded-md hover:bg-surface-container-high transition-all active:scale-95">
+            VIEW BIOGRAPHY
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPABILITIES BENTO GRID ===== -->
+  <section class="px-6 md:px-12 py-24 bg-surface-container-low">
+    <div class="flex justify-between items-end mb-16 flex-wrap gap-4">
+      <h2 class="font-['Epilogue'] text-4xl font-bold tracking-tighter">OPERATIONAL<br/>LOGIC UNITS</h2>
+      <span class="text-[0.6875rem] text-outline-variant tracking-widest uppercase">SECTION 02 // CAPABILITIES</span>
+    </div>
+    <div class="grid grid-cols-12 gap-6">
+
+      <!-- Large: Fleet Intelligence -->
+      <div class="col-span-12 lg:col-span-8 bg-surface-container-lowest p-10 rounded-xl relative overflow-hidden group border border-outline-variant/5">
+        <div class="absolute top-0 right-0 p-8">
+          <span class="text-4xl font-black text-secondary/10 font-['Epilogue']">01</span>
+        </div>
+        <div class="max-w-md relative z-10">
+          <span class="material-symbols-outlined text-secondary mb-6 text-4xl">settings_remote</span>
+          <h3 class="font-['Epilogue'] text-2xl font-bold mb-4 text-primary">Fleet Intelligence Platforms</h3>
+          <p class="text-on-surface-variant mb-8">Architecting end-to-end fleet platforms that track heavy assets, utilization, cycle efficiency, and load performance in real time.</p>
+          <div class="flex items-center gap-2 text-secondary font-bold group-hover:gap-4 transition-all">
+            EXPLORE CAPABILITY <span class="material-symbols-outlined">arrow_forward</span>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-secondary to-transparent"></div>
+      </div>
+
+      <!-- Small: Performance Analytics -->
+      <div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-high p-10 rounded-xl border border-outline-variant/10">
+        <span class="material-symbols-outlined text-tertiary mb-6 text-4xl">query_stats</span>
+        <h3 class="font-['Epilogue'] text-2xl font-bold mb-4 text-primary">Performance Analytics</h3>
+        <p class="text-on-surface-variant">Building executive-ready dashboards that turn complex production data into immediate action — from pit to boardroom.</p>
+      </div>
+
+      <!-- Small: AI Decision Support -->
+      <div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-high p-10 rounded-xl border border-outline-variant/10">
+        <span class="material-symbols-outlined text-secondary mb-6 text-4xl">smart_toy</span>
+        <h3 class="font-['Epilogue'] text-2xl font-bold mb-4 text-primary">AI Decision Support</h3>
+        <p class="text-on-surface-variant">Designing practical AI copilots and automation flows that reduce manual load, improve consistency, and sharpen decision quality.</p>
+      </div>
+
+      <!-- Wide: System Integration -->
+      <div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-xl flex flex-col md:flex-row overflow-hidden border border-outline-variant/5 group">
+        <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+          <span class="text-xs uppercase tracking-widest text-secondary font-bold mb-2">STATUS: ACTIVE</span>
+          <h3 class="font-['Epilogue'] text-2xl font-bold mb-4 text-primary">Industrial System Integration</h3>
+          <p class="text-on-surface-variant mb-6 text-sm">Integrating OEM APIs, telemetry streams, and operational databases into reliable platforms teams can trust every shift.</p>
+          <a href="#contact" class="w-fit px-6 py-2 border border-secondary/40 text-secondary text-sm font-bold hover:bg-secondary/10 transition-all">INITIATE PROTOCOL</a>
+        </div>
+        <div class="w-full md:w-1/2 h-48 md:h-auto bg-surface-container flex items-center justify-center">
+          <img src="/logo.png" alt="Sakhile Bhayi" class="w-32 h-32 object-contain opacity-10 group-hover:opacity-20 transition-opacity"/>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== METRICS SECTION ===== -->
+  <section class="px-6 md:px-12 py-32 grid grid-cols-12 gap-8 items-center">
+    <div class="col-span-12 lg:col-span-5 mb-12 lg:mb-0">
+      <h2 class="font-['Epilogue'] text-5xl font-black tracking-tight text-primary leading-[1.1] mb-8">METRICS OF<br/>MOMENTUM</h2>
+      <p class="text-on-surface-variant text-lg">Systems built on real operational discipline — not concepts. Every number reflects a production outcome.</p>
+    </div>
+    <div class="col-span-12 lg:col-span-7 grid grid-cols-2 gap-px bg-outline-variant/10">
+      <div class="bg-background p-10 md:p-12 flex flex-col">
+        <span class="text-secondary text-5xl font-black mb-2 font-['Epilogue']">10+</span>
+        <span class="text-[0.6875rem] uppercase tracking-widest text-outline">YEARS IN INDUSTRY</span>
+      </div>
+      <div class="bg-background p-10 md:p-12 flex flex-col">
+        <span class="text-secondary text-5xl font-black mb-2 font-['Epilogue']">40+</span>
+        <span class="text-[0.6875rem] uppercase tracking-widest text-outline">DIGITAL INITIATIVES DELIVERED</span>
+      </div>
+      <div class="bg-background p-10 md:p-12 flex flex-col">
+        <span class="text-secondary text-5xl font-black mb-2 font-['Epilogue']">24/7</span>
+        <span class="text-[0.6875rem] uppercase tracking-widest text-outline">OPERATIONAL MINDSET</span>
+      </div>
+      <div class="bg-background p-10 md:p-12 flex flex-col">
+        <span class="text-secondary text-5xl font-black mb-2 font-['Epilogue']">ZA</span>
+        <span class="text-[0.6875rem] uppercase tracking-widest text-outline">BASED IN SOUTH AFRICA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIOGRAPHY SECTION ===== -->
+  <section id="about" class="bg-surface-container-lowest py-32 px-6 md:px-12">
+
+    <!-- Header -->
+    <div class="mb-24 flex flex-col md:flex-row justify-between items-baseline gap-8 flex-wrap">
+      <div>
+        <span class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.2em] text-secondary mb-4 block">Biography</span>
+        <h2 class="font-['Epilogue'] text-4xl font-bold tracking-tight text-[#c6c6c7]">Narrative Path</h2>
+      </div>
+      <span class="font-['Inter'] text-xs tracking-widest text-secondary uppercase">2015 — TODAY</span>
+    </div>
+
+    <!-- Timeline -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+      <div class="hidden md:block absolute top-0 left-0 w-full h-[1px] bg-outline-variant/20"></div>
+
+      <!-- Era 01 -->
+      <div class="relative pt-12">
+        <div class="absolute -top-1 left-0 w-3 h-3 bg-secondary rounded-full shadow-[0_0_15px_rgba(137,206,255,0.6)]"></div>
+        <span class="font-['Epilogue'] text-6xl font-black text-outline/10 mb-6 block">01</span>
+        <h3 class="font-['Epilogue'] text-xl font-bold mb-4 text-[#c6c6c7]">Operational Grounding</h3>
+        <p class="text-on-surface-variant mb-8 leading-relaxed text-sm">
+          Built practical mine-site insight across shift discipline, production priorities, and the realities of data quality at source. Every decision demanded accountability under pressure.
+        </p>
+        <div class="text-[0.7rem] font-bold uppercase tracking-widest text-secondary">2015 →</div>
+      </div>
+
+      <!-- Era 02 -->
+      <div class="relative pt-12 md:mt-32">
+        <div class="absolute -top-1 left-0 w-3 h-3 bg-secondary rounded-full"></div>
+        <span class="font-['Epilogue'] text-6xl font-black text-outline/10 mb-6 block">02</span>
+        <h3 class="font-['Epilogue'] text-xl font-bold mb-4 text-[#c6c6c7]">Systems Delivery</h3>
+        <p class="text-on-surface-variant mb-8 leading-relaxed text-sm">
+          Led software delivery initiatives focused on fleet visibility, production reporting, and faster operational decision cycles across mining operations. Platform architecture connecting telemetry and leadership KPIs.
+        </p>
+        <div class="text-[0.7rem] font-bold uppercase tracking-widest text-secondary">2018 →</div>
+      </div>
+
+      <!-- Era 03 -->
+      <div class="relative pt-12 md:mt-64">
+        <div class="absolute -top-1 left-0 w-3 h-3 bg-secondary rounded-full"></div>
+        <span class="font-['Epilogue'] text-6xl font-black text-outline/10 mb-6 block">03</span>
+        <h3 class="font-['Epilogue'] text-xl font-bold mb-4 text-[#c6c6c7]">Intelligence Leadership</h3>
+        <p class="text-on-surface-variant mb-8 leading-relaxed text-sm">
+          Currently driving AI-assisted operational leadership through confidence-first product strategy, architecture, and execution — building living industrial intelligence systems.
+        </p>
+        <div class="text-[0.7rem] font-bold uppercase tracking-widest text-secondary">TODAY</div>
+      </div>
+    </div>
+
+    <!-- Philosophy -->
+    <div class="mt-48 grid grid-cols-12 gap-8 items-center">
+      <div class="col-span-12 md:col-span-5 bg-surface-container-high flex items-center justify-center p-16 aspect-square">
+        <img src="/logo.png" alt="Sakhile Bhayi" class="w-full max-w-[240px] h-auto object-contain grayscale brightness-75"/>
+      </div>
+      <div class="col-span-12 md:col-span-6 md:col-start-7">
+        <span class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.2em] text-secondary mb-6 block">Philosophy</span>
+        <h2 class="font-['Epilogue'] text-4xl font-extrabold mb-10 text-on-surface leading-tight">When insight is clear, teams execute with confidence.</h2>
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-secondary text-3xl flex-shrink-0">precision_manufacturing</span>
+            <div>
+              <h4 class="font-['Epilogue'] text-lg font-bold mb-2">Technical Rigor</h4>
+              <p class="text-on-surface-variant">Every system must survive the friction of reality. Build for frontline usability first — solutions your teams trust every shift.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-secondary text-3xl flex-shrink-0">memory</span>
+            <div>
+              <h4 class="font-['Epilogue'] text-lg font-bold mb-2">Embedded Intelligence</h4>
+              <p class="text-on-surface-variant">Make performance truth visible early. Turn insights into accountable actions — from supervisor to executive.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== EXPERTISE SECTION ===== -->
+  <section id="expertise" class="py-24 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Header -->
+      <div class="grid grid-cols-12 gap-8 items-end mb-8 flex-wrap">
+        <div class="col-span-12 md:col-span-8">
+          <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.1em] text-secondary mb-4 block">Expertise Index 01–04</label>
+          <h2 class="font-['Epilogue'] text-[3rem] md:text-[3.5rem] leading-[1.1] font-extrabold tracking-[-0.04em] text-primary">
+            INDUSTRIAL<br/>
+            MINING &amp;<br/>
+            <span class="text-secondary">INTELLIGENCE</span>
+          </h2>
+        </div>
+        <div class="col-span-12 md:col-span-4 md:text-right">
+          <p class="font-['Inter'] text-sm text-on-surface-variant md:max-w-xs md:ml-auto">
+            Deploying advanced analytical frameworks to optimize mining operations and autonomous fleet ecosystems.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="mt-16 grid grid-cols-12 gap-6">
+
+        <!-- Capability 01: Fleet Intelligence -->
+        <div class="col-span-12 lg:col-span-7 bg-surface-container-low rounded-xl overflow-hidden group border border-outline-variant/10 relative">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-transparent opacity-40"></div>
+          <div class="p-8 flex flex-col min-h-[280px]">
+            <div class="flex justify-between items-start mb-10">
+              <div class="bg-surface-container-high p-4 rounded-lg">
+                <span class="material-symbols-outlined text-secondary text-3xl">settings_remote</span>
+              </div>
+              <span class="font-['Inter'] text-[0.6875rem] text-outline">PROTOCOL: 01</span>
+            </div>
+            <h3 class="font-['Epilogue'] text-2xl font-bold mb-4">Fleet Intelligence Platforms</h3>
+            <p class="font-['Inter'] text-on-surface-variant text-sm mb-8 max-w-md">
+              Real-time orchestration of heavy assets through low-latency telemetry and autonomous command structures. Cycle efficiency, load performance, and utilization — tracked live.
+            </p>
+            <div class="mt-auto flex gap-2 flex-wrap">
+              <span class="px-3 py-1 bg-surface-container-highest rounded-full text-[0.6rem] uppercase tracking-wider text-secondary font-bold border border-secondary/20">Active Telemetry</span>
+              <span class="px-3 py-1 bg-surface-container-highest rounded-full text-[0.6rem] uppercase tracking-wider text-outline font-bold border border-outline-variant/20">Edge Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability 02: Performance Analytics -->
+        <div class="col-span-12 lg:col-span-5 bg-surface-container-high rounded-xl p-8 border border-outline-variant/20 relative">
+          <div class="mb-8">
+            <div class="w-2 h-2 rounded-full bg-secondary mb-4 shadow-[0_0_10px_#89ceff]"></div>
+            <h3 class="font-['Epilogue'] text-2xl font-bold mb-2">Performance Analytics</h3>
+            <p class="font-['Inter'] text-on-surface-variant text-sm">
+              High-fidelity data visualization for mission-critical production and infrastructure monitoring.
+            </p>
+          </div>
+          <div class="mt-8 space-y-4">
+            <div>
+              <div class="flex justify-between text-[0.6rem] text-outline mb-1"><span>PRODUCTION KPIs</span><span>80%</span></div>
+              <div class="h-1 bg-surface-variant rounded-full overflow-hidden"><div class="w-4/5 h-full bg-secondary"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[0.6rem] text-outline mb-1"><span>FLEET UTILIZATION</span><span>60%</span></div>
+              <div class="h-1 bg-surface-variant rounded-full overflow-hidden"><div class="w-3/5 h-full bg-secondary"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[0.6rem] text-outline mb-1"><span>DECISION SPEED</span><span>67%</span></div>
+              <div class="h-1 bg-surface-variant rounded-full overflow-hidden"><div class="w-2/3 h-full bg-secondary"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability 03: AI Support -->
+        <div class="col-span-12 lg:col-span-4 bg-surface-container-lowest border border-outline-variant/10 rounded-xl p-8 flex flex-col">
+          <div class="mb-10">
+            <span class="material-symbols-outlined text-tertiary text-4xl">smart_toy</span>
+          </div>
+          <h3 class="font-['Epilogue'] text-xl font-bold mb-4">AI Decision Support</h3>
+          <p class="font-['Inter'] text-on-surface-variant text-sm mb-6">
+            Predictive maintenance engines and AI copilots that reduce manual load, improve consistency, and sharpen operational decision quality on every shift.
+          </p>
+          <div class="mt-auto">
+            <a class="inline-flex items-center gap-2 text-secondary text-sm font-bold group" href="#contact">
+              Initiate a Conversation
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Capability 04: System Integration -->
+        <div class="col-span-12 lg:col-span-8 bg-surface-container-low rounded-xl border border-outline-variant/10 overflow-hidden">
+          <div class="p-8 flex flex-col justify-center h-full">
+            <h3 class="font-['Epilogue'] text-2xl font-bold mb-4">Industrial System Integration</h3>
+            <p class="font-['Inter'] text-on-surface-variant text-sm">
+              Seamlessly bridging OEM APIs, telemetry streams, and legacy operational databases into reliable cloud-native orchestration layers your teams can trust.
+            </p>
+            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>
+                <span class="font-['Inter'] text-[0.6rem] uppercase text-outline">OEM API CORE</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>
+                <span class="font-['Inter'] text-[0.6rem] uppercase text-outline">LEGACY SYNC</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>
+                <span class="font-['Inter'] text-[0.6rem] uppercase text-outline">TELEMETRY</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>
+                <span class="font-['Inter'] text-[0.6rem] uppercase text-outline">CLOUD NATIVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Specs -->
+      <div class="mt-16 bg-surface-container-lowest py-16 px-8 md:px-12 flex flex-col md:flex-row gap-12 items-start rounded-xl">
+        <div class="w-full md:w-1/3">
+          <h2 class="font-['Epilogue'] text-4xl font-black text-primary/20 leading-none">TECH<br/>SPECS</h2>
+        </div>
+        <div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="border-l border-secondary/30 pl-6">
+            <span class="font-['Inter'] text-secondary text-[0.6875rem] block mb-2">INFRASTRUCTURE</span>
+            <p class="font-['Inter'] text-on-surface font-medium mb-4">Industrial IoT &amp; Cloud Managed Edge Nodes</p>
+            <p class="font-['Inter'] text-xs text-on-surface-variant">Optimized for high-availability mining environments with real-time telemetry protocols.</p>
+          </div>
+          <div class="border-l border-outline-variant pl-6">
+            <span class="font-['Inter'] text-outline text-[0.6875rem] block mb-2">INTELLIGENCE</span>
+            <p class="font-['Inter'] text-on-surface font-medium mb-4">Custom Neural Predictive Engines</p>
+            <p class="font-['Inter'] text-xs text-on-surface-variant">Proprietary logic for identifying production bottlenecks and mechanical fatigue before failures occur.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="py-24 px-6 md:px-12 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Header -->
+      <header class="mb-24 flex flex-col md:flex-row justify-between items-start gap-8">
+        <div class="max-w-2xl">
+          <span class="font-['Inter'] text-secondary text-[0.6875rem] uppercase tracking-[0.2em] mb-4 block">Communication Terminal // 01</span>
+          <h1 class="font-['Epilogue'] text-5xl md:text-7xl font-black text-primary tracking-tighter leading-none mb-8">
+            STRATEGIC<br/><span class="text-secondary/80">BRIEFING.</span>
+          </h1>
+        </div>
+        <div class="md:text-right self-end md:max-w-xs">
+          <p class="font-['Inter'] text-on-surface-variant leading-relaxed">
+            For industrial-grade systems, architectural consulting, or high-stakes digital deployments. Response time: &lt; 24h.
+          </p>
+        </div>
+      </header>
+
+      <!-- Two-column layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+        <!-- Left: Availability & Channels -->
+        <div class="lg:col-span-5 space-y-12">
+
+          <!-- Availability Card -->
+          <div class="bg-surface-container-lowest p-8 rounded-lg relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              <span class="text-[0.625rem] font-['Inter'] text-secondary uppercase tracking-widest">Live: Available</span>
+            </div>
+            <h2 class="font-['Epilogue'] text-xl font-bold text-primary mb-6">Operational Schedule</h2>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center py-3 border-b border-outline-variant/20">
+                <span class="text-on-surface-variant font-['Inter'] uppercase text-[0.75rem]">Timezone</span>
+                <span class="text-primary font-medium">SAST (UTC+2)</span>
+              </div>
+              <div class="flex justify-between items-center py-3 border-b border-outline-variant/20">
+                <span class="text-on-surface-variant font-['Inter'] uppercase text-[0.75rem]">Working Hours</span>
+                <span class="text-primary font-medium">08:00 — 18:00</span>
+              </div>
+              <div class="flex justify-between items-center py-3 border-b border-outline-variant/20">
+                <span class="text-on-surface-variant font-['Inter'] uppercase text-[0.75rem]">Location</span>
+                <span class="text-primary font-medium">South Africa</span>
+              </div>
+              <div class="flex justify-between items-center py-3">
+                <span class="text-on-surface-variant font-['Inter'] uppercase text-[0.75rem]">Focus</span>
+                <span class="text-secondary font-bold">Mining &amp; Industrial</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Channels -->
+          <div class="space-y-4">
+            <h2 class="font-['Epilogue'] text-xl font-bold text-primary px-2">Direct Interfaces</h2>
+            <a class="flex items-center justify-between p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-lg hover:bg-surface-container-high transition-all group" href="https://za.linkedin.com/in/sakhilebayi" target="_blank" rel="noreferrer">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-secondary">link</span>
+                <div>
+                  <p class="text-[0.625rem] font-['Inter'] text-on-surface-variant uppercase tracking-widest">LinkedIn</p>
+                  <p class="text-primary font-medium">Connect with Sakhile Bhayi</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">north_east</span>
+            </a>
+          </div>
+
+          <!-- Security note -->
+          <div class="p-6 border-l-2 border-secondary/20 space-y-3">
+            <p class="font-['Inter'] text-secondary text-[0.625rem] tracking-[0.3em] uppercase">Security Protocol</p>
+            <p class="text-xs text-on-surface-variant font-['Inter'] leading-relaxed">
+              All communications are treated with full confidentiality. Advisory, architecture, and delivery engagements are currently open. Response within 24 hours.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="lg:col-span-7 bg-surface-container-lowest p-10 rounded-lg shadow-2xl relative">
+          <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
+          <h2 class="font-['Epilogue'] text-2xl font-bold text-primary mb-10">Project Parameters</h2>
+          <form id="contact-form" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-2">
+                <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Operator Identity</label>
+                <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="Full Name or Entity" type="text" name="name" required/>
+              </div>
+              <div class="space-y-2">
+                <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Return Path</label>
+                <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="email@domain.com" type="email" name="email" required/>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Organisation</label>
+              <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="Your company or entity" type="text" name="company"/>
+            </div>
+            <div class="space-y-2">
+              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Mission Objective</label>
+              <select class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 text-primary appearance-none cursor-pointer" name="objective">
+                <option>Fleet Intelligence Platform</option>
+                <option>Performance Analytics Dashboard</option>
+                <option>AI Decision Support</option>
+                <option>Industrial System Integration</option>
+                <option>Strategic Advisory</option>
+                <option>Other Inquiry</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Strategic Brief</label>
+              <textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary resize-none" placeholder="Define the scope, challenges, and desired outcome..." rows="6" name="message" required></textarea>
+            </div>
+            <div class="pt-4">
+              <button class="group flex items-center gap-3 w-full md:w-auto px-12 py-5 bg-secondary text-on-secondary font-bold rounded-md hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(137,206,255,0.2)]" type="submit">
+                TRANSMIT BRIEF
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+              </button>
+            </div>
+            <p id="form-status" class="text-sm text-secondary hidden"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="mx-6 md:mx-12 my-24 rounded-2xl bg-gradient-to-br from-surface-container-high to-surface-container-lowest p-12 md:p-20 text-center relative overflow-hidden border border-outline-variant/10">
+    <div class="relative z-10">
+      <h2 class="font-['Epilogue'] text-4xl font-bold mb-6 text-primary">READY TO ARCHITECT?</h2>
+      <p class="text-on-surface-variant max-w-xl mx-auto mb-10 text-lg">
+        Connect with Sakhile Bhayi to discuss the deployment of intelligent systems within your industrial and mining infrastructure.
+      </p>
+      <a href="#contact" class="inline-block bg-secondary text-on-secondary px-12 py-5 font-black text-lg tracking-tight rounded-md hover:scale-105 transition-transform active:scale-95 shadow-[0_10px_30px_rgba(137,206,255,0.2)]">
+        INITIATE COLLABORATION
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full py-12 border-t border-[#c6c6c7]/5 bg-[#131315] flex flex-col md:flex-row justify-between items-center px-12 gap-8">
+    <div class="flex items-center gap-3">
+      <img src="/logo.png" alt="Sakhile Bhayi" class="h-8 w-auto object-contain"/>
+      <span class="font-['Epilogue'] font-black text-[#89ceff]">SAKHILE BHAYI</span>
+    </div>
+    <div class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.1em] text-[#c6c6c7]/30">
+      © 2026 SAKHILE BHAYI. ALL RIGHTS RESERVED.
+    </div>
+    <div class="flex gap-8">
+      <a class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.1em] text-[#c6c6c7]/30 hover:text-[#89ceff] transition-colors" href="https://za.linkedin.com/in/sakhilebayi" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.1em] text-[#c6c6c7]/30 hover:text-[#89ceff] transition-colors" href="#contact">Contact</a>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // Mobile drawer
+  const mobileMenuBtn   = document.getElementById('mobile-menu-btn');
+  const mobileDrawer    = document.getElementById('mobile-drawer');
+  const closeDrawerBtn  = document.getElementById('close-drawer');
+  const drawerBackdrop  = document.getElementById('drawer-backdrop');
+
+  function openDrawer()  { mobileDrawer.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { mobileDrawer.classList.add('hidden');    document.body.style.overflow = ''; }
+
+  mobileMenuBtn.addEventListener('click', openDrawer);
+  closeDrawerBtn.addEventListener('click', closeDrawer);
+  drawerBackdrop.addEventListener('click', closeDrawer);
+  mobileDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  // Active sidebar nav via IntersectionObserver
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function setActiveNav(sectionId) {
+    navLinks.forEach(link => {
+      const isActive = link.dataset.section === sectionId;
+      link.classList.toggle('bg-[#89ceff]/10',   isActive);
+      link.classList.toggle('text-[#89ceff]',     isActive);
+      link.classList.toggle('border-l-4',         isActive);
+      link.classList.toggle('border-[#89ceff]',   isActive);
+      link.classList.toggle('text-[#c6c6c7]/40',  !isActive);
+      link.classList.toggle('hover:text-[#c6c6c7]', !isActive);
+      link.classList.toggle('hover:bg-[#c6c6c7]/5', !isActive);
+    });
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActiveNav(entry.target.id);
+    });
+  }, { rootMargin: '-35% 0px -35% 0px', threshold: 0 });
+
+  ['home', 'about', 'expertise', 'contact'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  // Set initial active state
+  setActiveNav('home');
+
+  // Contact form
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const status = document.getElementById('form-status');
+    status.textContent = 'Thank you for reaching out. Your message has been received — expect a response within 24 hours.';
+    status.classList.remove('hidden');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

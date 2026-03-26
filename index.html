@@ -576,24 +576,32 @@
         <div class="lg:col-span-7 bg-surface-container-lowest p-10 rounded-lg shadow-2xl relative">
           <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
           <h2 class="font-['Epilogue'] text-2xl font-bold text-primary mb-10">Project Parameters</h2>
-          <form id="contact-form" class="space-y-8">
+
+          <form id="contact-form" class="space-y-8" novalidate>
+            <!-- Web3Forms: delivers to form@sakhilebhayi.com -->
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY"/>
+            <input type="hidden" name="subject" value="New Strategic Brief — Sakhile Bhayi Website"/>
+            <input type="hidden" name="from_name" value="Sakhile Bhayi Website"/>
+            <!-- Honeypot: catches bots -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="space-y-2">
-                <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Operator Identity</label>
-                <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="Full Name or Entity" type="text" name="name" required/>
+                <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block" for="cf-name">Operator Identity</label>
+                <input id="cf-name" class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="Full Name or Entity" type="text" name="name" required/>
               </div>
               <div class="space-y-2">
-                <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Return Path</label>
-                <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="email@domain.com" type="email" name="email" required/>
+                <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block" for="cf-email">Return Path</label>
+                <input id="cf-email" class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="email@domain.com" type="email" name="email" required/>
               </div>
             </div>
             <div class="space-y-2">
-              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Organisation</label>
-              <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="Your company or entity" type="text" name="company"/>
+              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block" for="cf-company">Organisation</label>
+              <input id="cf-company" class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary" placeholder="Your company or entity" type="text" name="company"/>
             </div>
             <div class="space-y-2">
-              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Mission Objective</label>
-              <select class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 text-primary appearance-none cursor-pointer" name="objective">
+              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block" for="cf-objective">Mission Objective</label>
+              <select id="cf-objective" class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 text-primary appearance-none cursor-pointer" name="objective">
                 <option>Fleet Intelligence Platform</option>
                 <option>Performance Analytics Dashboard</option>
                 <option>AI Decision Support</option>
@@ -603,16 +611,32 @@
               </select>
             </div>
             <div class="space-y-2">
-              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block">Strategic Brief</label>
-              <textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary resize-none" placeholder="Define the scope, challenges, and desired outcome..." rows="6" name="message" required></textarea>
+              <label class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-on-surface-variant block" for="cf-message">Strategic Brief</label>
+              <textarea id="cf-message" class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:outline-none focus:border-secondary transition-all py-4 placeholder:text-outline-variant/60 text-primary resize-none" placeholder="Define the scope, challenges, and desired outcome..." rows="6" name="message" required></textarea>
             </div>
-            <div class="pt-4">
-              <button class="group flex items-center gap-3 w-full md:w-auto px-12 py-5 bg-secondary text-on-secondary font-bold rounded-md hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(137,206,255,0.2)]" type="submit">
-                TRANSMIT BRIEF
-                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-start gap-6">
+              <button id="cf-submit" class="group flex items-center gap-3 w-full sm:w-auto px-12 py-5 bg-secondary text-on-secondary font-bold rounded-md hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(137,206,255,0.2)] disabled:opacity-50 disabled:cursor-not-allowed" type="submit">
+                <span id="cf-btn-text">TRANSMIT BRIEF</span>
+                <span id="cf-btn-icon" class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
               </button>
             </div>
-            <p id="form-status" class="text-sm text-secondary hidden"></p>
+
+            <!-- Status messages -->
+            <div id="cf-success" class="hidden flex items-start gap-4 p-6 bg-secondary/10 border border-secondary/30 rounded-lg">
+              <span class="material-symbols-outlined text-secondary flex-shrink-0">check_circle</span>
+              <div>
+                <p class="font-['Epilogue'] font-bold text-secondary text-sm">Brief Transmitted</p>
+                <p class="text-on-surface-variant text-sm mt-1">Your message has been received. Expect a response within 24 hours.</p>
+              </div>
+            </div>
+            <div id="cf-error" class="hidden flex items-start gap-4 p-6 bg-error/10 border border-error/30 rounded-lg">
+              <span class="material-symbols-outlined text-error flex-shrink-0">error</span>
+              <div>
+                <p class="font-['Epilogue'] font-bold text-error text-sm">Transmission Failed</p>
+                <p id="cf-error-msg" class="text-on-surface-variant text-sm mt-1">Something went wrong. Please try again or reach out via LinkedIn.</p>
+              </div>
+            </div>
           </form>
         </div>
 
@@ -695,14 +719,70 @@
   // Set initial active state
   setActiveNav('home');
 
-  // Contact form
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const status = document.getElementById('form-status');
-    status.textContent = 'Thank you for reaching out. Your message has been received — expect a response within 24 hours.';
-    status.classList.remove('hidden');
-    this.reset();
-  });
+  // Contact form — Web3Forms AJAX submission
+  (function () {
+    const form      = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('cf-submit');
+    const btnText   = document.getElementById('cf-btn-text');
+    const btnIcon   = document.getElementById('cf-btn-icon');
+    const success   = document.getElementById('cf-success');
+    const error     = document.getElementById('cf-error');
+    const errorMsg  = document.getElementById('cf-error-msg');
+
+    function setLoading(loading) {
+      submitBtn.disabled = loading;
+      btnText.textContent = loading ? 'TRANSMITTING...' : 'TRANSMIT BRIEF';
+      btnIcon.textContent = loading ? 'hourglass_empty' : 'send';
+    }
+
+    function showSuccess() {
+      success.classList.remove('hidden');
+      error.classList.add('hidden');
+      form.reset();
+    }
+
+    function showError(msg) {
+      error.classList.remove('hidden');
+      success.classList.add('hidden');
+      if (msg) errorMsg.textContent = msg;
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      success.classList.add('hidden');
+      error.classList.add('hidden');
+
+      // Basic client-side validation
+      const name    = form.querySelector('[name=name]').value.trim();
+      const email   = form.querySelector('[name=email]').value.trim();
+      const message = form.querySelector('[name=message]').value.trim();
+      if (!name || !email || !message) {
+        showError('Please fill in all required fields before transmitting.');
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        const data = new FormData(form);
+        const res  = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data,
+        });
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          showSuccess();
+        } else {
+          showError(json.message || 'Submission failed. Please try again.');
+        }
+      } catch (err) {
+        showError('Network error. Please check your connection and try again.');
+      } finally {
+        setLoading(false);
+      }
+    });
+  })();
 </script>
 
 </body>
